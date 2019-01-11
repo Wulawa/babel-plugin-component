@@ -61,7 +61,7 @@ module.exports = function core(defaultLibraryName) {
         } else {
           path = `${libraryName}/${libDir}/${parseName(methodName, camel2Dash)}`;
         }
-        const _path = path;
+        const _path = `${libraryName}/${libDir}/`;
 
         selectedMethods[methodName] = addDefault(file.path, path, { nameHint: methodName });
         if (styleLibrary && typeof styleLibrary === 'object') {
